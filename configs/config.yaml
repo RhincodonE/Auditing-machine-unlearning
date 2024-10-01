@@ -1,0 +1,31 @@
+data:
+  gpu: 0
+  num_workers: 3
+  in_dataset: /users/home/parentfolder/Augment/tmp/cifar_in.beton
+  test_dataset: /users/home/parentfolder/Augment/tmp/cifar_test.beton
+  out_dataset: /users/home/parentfolder/Augment/tmp/cifar_out.beton
+  augment_dataset: /users/home/parentfolder/Augment/tmp/cifar_augment.beton
+  sample_index: 1
+  augmentations: 1000
+  model_folder: /users/home/parentfolder/Augment/models
+  in_observations: /users/home/parentfolder/Augment/result/in_shadow_observations.csv
+  out_observations: /users/home/parentfolder/Augment/result/out_shadow_observations.csv
+  in_shadow_observations: /users/home/parentfolder/Augment/result/in_observations.csv
+  out_shadow_observations: /users/home/parentfolder/Augment/result/out_observations.csv
+
+
+training:
+  batch_size: 512
+  epochs: 24
+  lr: 0.5
+  momentum: 0.9
+  lr_peak_epoch: 5
+  momentum: 0.9
+  weight_decay: 5e-4
+  label_smoothing: 0.1
+  lr_tta: true
+  num_workers: 3
+  in_model_save_path: /users/home/parentfolder/Augment/models/model_in.pth
+  out_model_save_path: /users/home/parentfolder/Augment/models/model_out.pth
+  in_shadow_model_save_path: /users/home/parentfolder/Augment/models/model_shadow_in.pth
+  out_shadow_model_save_path: /users/home/parentfolder/Augment/models/model_shadow_out.pth
